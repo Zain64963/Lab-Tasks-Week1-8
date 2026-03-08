@@ -1,0 +1,48 @@
+body{
+
+font-family: Arial;
+background:#f2f2f2;
+text-align:center;
+
+}
+
+.container{
+
+background:white;
+padding:30px;
+margin:50px auto;
+width:600px;
+border-radius:10px;
+
+}
+
+button{
+
+padding:10px 20px;
+background:#007BFF;
+color:white;
+border:none;
+
+}
+
+table{
+
+margin:auto;
+margin-top:20px;
+border-collapse:collapse;
+
+}
+
+td,th{
+
+border:1px solid black;
+padding:10px;
+
+}
+
+.result{
+
+font-size:22px;
+color:green;
+
+}

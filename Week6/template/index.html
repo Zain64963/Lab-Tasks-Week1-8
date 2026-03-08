@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Face Profiling</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Face Profiling System</h1>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image" required>
+
+<button type="submit">Analyze Face</button>
+
+</form>
+
+{% if image_path %}
+
+<h2>Processed Image</h2>
+
+<img src="{{image_path}}" width="400">
+
+{% endif %}
+
+{% if result %}
+
+<h2>Facial Measurements</h2>
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Eye Distance</td>
+<td>{{result.eye}}</td>
+</tr>
+
+<tr>
+<td>Nose Length</td>
+<td>{{result.nose}}</td>
+</tr>
+
+<tr>
+<td>Mouth Width</td>
+<td>{{result.mouth}}</td>
+</tr>
+
+<tr>
+<td>Jaw Width</td>
+<td>{{result.jaw}}</td>
+</tr>
+
+</table>
+
+<h2>Personality Result</h2>
+
+<p class="result">{{result.personality}}</p>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
